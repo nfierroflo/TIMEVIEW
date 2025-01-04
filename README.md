@@ -1,6 +1,6 @@
 # TIMEVIEW
 
-This is  a modfied repostitory of the original repository for the paper "Towards Transparent Time Series Forecasting".
+This is  a modfied version of the original repository for the paper "Towards Transparent Time Series Forecasting".
 
 ## Clone the repository
 Clone the repository using
