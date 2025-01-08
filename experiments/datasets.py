@@ -178,6 +178,28 @@ class SineDataset(BaseDataset):
             'x': (-1, 1)
         }
     
+class SineDataset_extended(BaseDataset):
+
+    def __init__(self, n_samples=100, n_timesteps=20):
+        super().__init__(n_samples=n_samples, n_timesteps=n_timesteps)
+        self.X = pd.DataFrame({'x':np.linspace(-1,1,n_samples)})
+        self.ts = [np.linspace(0,3,n_timesteps) for i in range(n_samples)]
+        self.ys = [np.sin(t*x*np.pi) for t, x in zip(self.ts, self.X['x'])]
+    
+    def get_X_ts_ys(self):
+        return self.X, self.ts, self.ys
+    
+    def __len__(self):
+        return len(self.X)
+    
+    def get_feature_names(self):
+        return ['x']
+    
+    def get_feature_ranges(self):
+        return {
+            'x': (-1, 1)
+        }
+    
 class SineTransDataset(BaseDataset):
 
     def __init__(self, n_samples=100, n_timesteps=20):
