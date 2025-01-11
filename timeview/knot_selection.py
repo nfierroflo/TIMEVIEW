@@ -62,7 +62,7 @@ def get_knots_for_trajectories(ts, ys, n_internal_knots, verbose=False):
     return found_knots
 
 
-def calculate_knot_placement(ts, ys, n_internal_knots, T, seed=0, verbose=False):
+def calculate_knot_placement(ts, ys, n_internal_knots, T, Ti=0.0, seed=0, verbose=False):
     """
     Given a list of trajectories, this function calculates the optimal knot
     placement for all trajectories.
@@ -71,7 +71,7 @@ def calculate_knot_placement(ts, ys, n_internal_knots, T, seed=0, verbose=False)
     all_knots = np.concatenate(found_placements).reshape(-1,1)
     kmeans = KMeans(n_clusters=n_internal_knots,random_state=seed).fit(all_knots)
     clusters = np.sort(kmeans.cluster_centers_.ravel())
-    clusters[0] = 0.0
+    clusters[0] = Ti
     clusters[-1] = T
     return clusters
 
