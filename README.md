@@ -1,6 +1,7 @@
 # TIMEVIEW
 
 This is  a modfied version of the original repository for the paper "Towards Transparent Time Series Forecasting".
+This versions implements the TIMEVIEW4FE model.
 
 ## Clone the repository
 Clone the repository using
