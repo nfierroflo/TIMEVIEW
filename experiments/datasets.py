@@ -410,7 +410,12 @@ class StressStrainDataset(BaseDataset):
 
         self.X, self.ts, self.ys = self._extract_data_from_one_dataframe(df)
 
-    def get_X_ts_ys(self):
+    def get_X_ts_ys(self,fixed_length=None):
+        if fixed_length is not None:
+            Ys=np.array([y[:fixed_length] for y in self.ys if len(y)>=fixed_length])
+            Ts=np.array([t[:fixed_length] for t in self.ts if len(t)>=fixed_length])
+            X=self.X[self.X.index.isin([i for i in range(len(self.ys)) if len(self.ys[i])>=fixed_length])]
+            return X, Ts, Ys
         return self.X, self.ts, self.ys
     
     def __len__(self):
