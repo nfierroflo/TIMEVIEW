@@ -608,7 +608,7 @@ def train_latent_tsmixer_seasonality(
             total_test_loss += loss.item() * X_batch.size(0)
 
     test_loss = total_test_loss / len(test_loader.dataset)
-    print(f"Best Model Test Loss: {test_loss:.4f}, Best Epoch: {best_epoch+1}")
+    #print(f"Best Model Test Loss: {test_loss:.4f}, Best Epoch: {best_epoch+1}")
 
     # Return the best model and the loss curves
     return model, (train_losses, val_losses), test_loss,test_dataset
