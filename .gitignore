@@ -135,6 +135,7 @@ lightning_logs/
 logs/
 
 results/
+hide/
 
 # VSCode
 .vscode/

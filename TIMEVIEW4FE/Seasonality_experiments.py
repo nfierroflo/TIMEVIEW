@@ -32,6 +32,9 @@ n_timesteps=prediction_length
 
 results=pd.DataFrame(columns=['dataset','model','mean_loss','std_loss'])
 
+print("Seasonality experiments")
+print("Seasonality1")
+
 X = pd.DataFrame({'x':np.linspace(1.0,3.0,n_samples)})
 ts = [np.linspace(0,1,n_timesteps) for i in range(n_samples)]
 ys = [2*t*x + np.sin(t*x*np.pi) for t, x in zip(ts, X['x'])]
@@ -95,6 +98,8 @@ test_loss_mean, test_loss_std= run_trials(
 
 new_row = pd.DataFrame({'dataset': ['Seasonality1'], 'model': ['TIMEVIEW4FE(TSMixer)'], 'mean_loss': [test_loss_mean], 'std_loss': [test_loss_std]})
 results = pd.concat([results, new_row], ignore_index=True)
+
+print("Seasonality2")
 
 X = pd.DataFrame({'x':np.linspace(1.0,3.0,n_samples)})
 ts = [np.linspace(0,1,n_timesteps) for i in range(n_samples)]
