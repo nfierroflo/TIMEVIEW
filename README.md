@@ -29,15 +29,9 @@ Or you can call the scripts individually in `run_scripts`.
 
 The results will be saved in
 ```
-experiments/benchmarks/{timestamp}/
+TIMEVIEW4FE/results
 experiments/benchmarks/summary.json
 ```
-
-## Figures and tables
-Jupyter notebooks used to create all figures and tables in the paper can be found in `experiments/analysis`.
-
-## Other information
-To properly install PySR follow instructions on https://github.com/MilesCranmer/PySR
 
 ## Citations
 If you use this code, please cite using the following information.
