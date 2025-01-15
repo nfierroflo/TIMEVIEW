@@ -30,7 +30,6 @@ Or you can call the scripts individually in `run_scripts`.
 The results will be saved in
 ```
 TIMEVIEW4FE/results
-experiments/benchmarks/summary.json
 ```
 
 ## Citations
