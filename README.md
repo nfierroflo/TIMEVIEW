@@ -6,7 +6,7 @@ This versions implements the TIMEVIEW4FE model.
 ## Clone the repository
 Clone the repository using
 ```
-git clone https://github.com/krzysztof-kacprzyk/TIMEVIEW.git
+git clone https://github.com/nfierroflo/TIMEVIEW.git
 ```
 
 ## Dependencies
