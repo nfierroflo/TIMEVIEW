@@ -17,9 +17,9 @@ conda env create -n timeview --file environment.yml
 This will also install `timeview` (the main module) in editable mode.
 
 ## Running all experiments
-To run all experiments navigate to `experiments` using
+To run TIMEVIEW4FE experiments navigate to `TIMEVIEW4FE` using
 ```
-cd experiments
+cd TIMEVIEW4FE
 ``` 
 and run
 ```
